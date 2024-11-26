@@ -2,6 +2,7 @@
 using System.Data;
 using System.ComponentModel;
 using System.Data.SqlClient;
+using Data_Access;
 
 namespace DVLD_DataAccess
 {
@@ -13,7 +14,7 @@ namespace DVLD_DataAccess
         ref int NationalityCountyID, ref string ImagePath)
         {
             bool isFound = false;
-            SqlConnection connection = new SqlConnection("");
+            SqlConnection connection = new SqlConnection(clsDataAccessSettings.ConnectionString);
             string query = "select * from People where PersonID = @PersonID";
             SqlCommand command = new SqlCommand(query, connection);
             command.Parameters.AddWithValue("@PersonID", PersonId);
@@ -79,7 +80,7 @@ namespace DVLD_DataAccess
         ref int NationalityCountyID, ref string ImagePath)
         {
             bool isFound = false;
-            SqlConnection connection = new SqlConnection("");
+            SqlConnection connection = new SqlConnection(clsDataAccessSettings.ConnectionString);
             string query = "select * from People where NationalNo = @NationalNo";
             SqlCommand command = new SqlCommand(query, connection);
             command.Parameters.AddWithValue("@NationalNo", NationalNo);
@@ -148,8 +149,8 @@ namespace DVLD_DataAccess
         {
             int PersonID = -1;
 
-            // Connection string should be properly configured
-            using (SqlConnection connection = new SqlConnection("YourConnectionStringHere"))
+            // Connection string should be properly configured            
+            using (SqlConnection connection = new SqlConnection(clsDataAccessSettings.ConnectionString))
             {
                 // Corrected SQL query
                 string query = @"
@@ -210,7 +211,7 @@ namespace DVLD_DataAccess
             int rowsAffected = 0;
 
             // Connection string should be properly configured
-            using (SqlConnection connection = new SqlConnection("YourConnectionStringHere"))
+            using (SqlConnection connection = new SqlConnection(clsDataAccessSettings.ConnectionString))
             {
                 // Corrected SQL query for updating a record
                 string query = @"
@@ -266,7 +267,7 @@ namespace DVLD_DataAccess
             DataTable dt = new DataTable();
 
             // Connection string should be properly configured
-            using (SqlConnection connection = new SqlConnection("YourConnectionStringHere"))
+            using (SqlConnection connection = new SqlConnection(clsDataAccessSettings.ConnectionString))
             {
                 string query = @"
             SELECT 
@@ -322,7 +323,7 @@ namespace DVLD_DataAccess
         {
             int rowsAffected = 0;
 
-            using (SqlConnection connection = new SqlConnection("YourConnectionStringHere"))
+            using (SqlConnection connection = new SqlConnection(clsDataAccessSettings.ConnectionString))
             {
                 string query = @"DELETE FROM People WHERE PersonID = @PersonID";
 
@@ -349,7 +350,7 @@ namespace DVLD_DataAccess
         {
             bool isFound = false;
 
-            using (SqlConnection connection = new SqlConnection("YourConnectionStringHere"))
+            using (SqlConnection connection = new SqlConnection(clsDataAccessSettings.ConnectionString))
             {
                 string query = "SELECT 1 FROM People WHERE PersonID = @PersonID";
 
@@ -378,7 +379,7 @@ namespace DVLD_DataAccess
         {
             bool isFound = false;
 
-            using (SqlConnection connection = new SqlConnection("YourConnectionStringHere"))
+            using (SqlConnection connection = new SqlConnection(clsDataAccessSettings.ConnectionString))
             {
                 string query = "SELECT 1 FROM People WHERE NationalNo = @NationalNo";
 

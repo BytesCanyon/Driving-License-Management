@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Data;
 using DVLD_DataAccess;
 
 namespace DVLD_Business
@@ -26,6 +27,9 @@ namespace DVLD_Business
             bool isFound = clsCountryData.GetCountryInfoByName(countryName, ref id);
 
             return isFound ? new clsCountry(id, countryName) : null;
+        }
+        public static DataTable GetAllCountries() { 
+            return clsCountryData.GetCountryList();
         }
     }
 }

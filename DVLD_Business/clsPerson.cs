@@ -13,7 +13,7 @@ namespace DVLD_Business
         public enum enMode { AddNew = 0, Update = 1}
         public enMode mode = enMode.AddNew;
 
-        int PersonId {  get; set; }
+        public int PersonId {  get; set; }
         public string FirstName{  get; set; }
         public string SecondName{  get; set; }
         public string ThirdName{  get; set; }
