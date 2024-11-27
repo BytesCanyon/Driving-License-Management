@@ -18,10 +18,21 @@ namespace Driving_License_Management
             InitializeComponent();
         }
 
-        private void addToolStripMenuItem_Click(object sender, EventArgs e)
+        private void frmMain_Load(object sender, EventArgs e)
+        {
+
+        }
+
+        private void updateToolStripMenuItem_Click(object sender, EventArgs e)
         {
             frmAddUpdatePepole frmAddUpdatePepole = new frmAddUpdatePepole();
             frmAddUpdatePepole.Show();
+        }
+
+        private void findToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            frmFindPerson frmFindPerson = new frmFindPerson();
+            frmFindPerson.Show();
         }
     }
 }

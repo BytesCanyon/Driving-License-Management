@@ -160,11 +160,17 @@
     </Compile>
     <Compile Include="Global\clsUtils.cs" />
     <Compile Include="Global\clsValidation.cs" />
-    <Compile Include="People\Controles\clsPersonCard.cs">
+    <Compile Include="People\Controles\ctrlPersonCard.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="People\Controles\clsPersonCard.Designer.cs">
-      <DependentUpon>clsPersonCard.cs</DependentUpon>
+    <Compile Include="People\Controles\ctrlPersonCard.Designer.cs">
+      <DependentUpon>ctrlPersonCard.cs</DependentUpon>
+    </Compile>
+    <Compile Include="People\Controles\ctrlPersonCardWithFilter.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="People\Controles\ctrlPersonCardWithFilter.Designer.cs">
+      <DependentUpon>ctrlPersonCardWithFilter.cs</DependentUpon>
     </Compile>
     <Compile Include="People\frmAddUpdatePepole.cs">
       <SubType>Form</SubType>
@@ -172,16 +178,28 @@
     <Compile Include="People\frmAddUpdatePepole.Designer.cs">
       <DependentUpon>frmAddUpdatePepole.cs</DependentUpon>
     </Compile>
+    <Compile Include="People\frmFindPerson.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="People\frmFindPerson.Designer.cs">
+      <DependentUpon>frmFindPerson.cs</DependentUpon>
+    </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include="frmMain.resx">
       <DependentUpon>frmMain.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="People\Controles\clsPersonCard.resx">
-      <DependentUpon>clsPersonCard.cs</DependentUpon>
+    <EmbeddedResource Include="People\Controles\ctrlPersonCard.resx">
+      <DependentUpon>ctrlPersonCard.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="People\Controles\ctrlPersonCardWithFilter.resx">
+      <DependentUpon>ctrlPersonCardWithFilter.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="People\frmAddUpdatePepole.resx">
       <DependentUpon>frmAddUpdatePepole.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="People\frmFindPerson.resx">
+      <DependentUpon>frmFindPerson.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>

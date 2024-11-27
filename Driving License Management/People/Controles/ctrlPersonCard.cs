@@ -13,7 +13,7 @@ using DVLD_Business;
 
 namespace Driving_License_Management.People.Controles
 {
-    public partial class clsPersonCard : UserControl
+    public partial class ctrlPersonCard : UserControl
     {
         private clsPerson _Person;
         private int _PersonID = -1;
@@ -22,12 +22,28 @@ namespace Driving_License_Management.People.Controles
 
         public int PersonID { get => _PersonID; }
 
-        public clsPersonCard()
+        public ctrlPersonCard()
         {
             InitializeComponent();
         }
+        private void lblEdit_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
+        {
+            frmAddUpdatePepole frmAddUpdatePepole = new frmAddUpdatePepole(_PersonID);
+            frmAddUpdatePepole.ShowDialog();
+            LoadPersonIfo(_PersonID);
+        }
+        public void LoadPersonIfo(string No)
+        {
+            _Person = clsPerson.Find(No);
+            if (_Person == null)
+            {
+                ResetPersonIfo();
+                MessageBox.Show("No Person With National No = " + No.ToString(), "Error", MessageBoxButtons.OK);
+            }
+            _FillPersonInfo();
+        }
 
-        private void _LoadPersonIfo(int id)
+        public void LoadPersonIfo(int id)
         {
             _Person = clsPerson.Find(id);
             if (_Person == null)
@@ -39,16 +55,7 @@ namespace Driving_License_Management.People.Controles
             _FillPersonInfo();
         }
 
-        private void _LoadPersonIfo(string No)
-        {
-            _Person = clsPerson.Find(No);
-            if (_Person == null)
-            {
-                ResetPersonIfo();
-                MessageBox.Show("No Person With National No = " + No.ToString(), "Error", MessageBoxButtons.OK);
-            }
-            _FillPersonInfo();
-        }
+
 
         private void ResetPersonIfo()
         {
@@ -72,7 +79,7 @@ namespace Driving_License_Management.People.Controles
             lbladdress.Text = _Person.Address.ToString();
             lblGender.Text = _Person.Gendor == 0 ? "Male":"Female";
             lblNationalNo.Text = _Person.NationalNo.ToString();
-            lblCountry.Text = clsCountry.Find(_Person.NationalityCountyID).ToString();
+            lblCountry.Text = clsCountry.Find(_Person.NationalityCountyID).Name.ToString();
             lblPhone.Text = _Person.Phone.ToString();
             lblDateOfBirth.Text = _Person.DateOfBirth.ToString();
             _LoadPersonImgae();
@@ -102,11 +109,6 @@ namespace Driving_License_Management.People.Controles
 
         }
 
-        private void lblEdit_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
-        {
-            frmAddUpdatePepole frmAddUpdatePepole = new frmAddUpdatePepole(_PersonID);
-            frmAddUpdatePepole.ShowDialog();
-            _LoadPersonIfo(_PersonID);
-        }
+  
     }
 }
