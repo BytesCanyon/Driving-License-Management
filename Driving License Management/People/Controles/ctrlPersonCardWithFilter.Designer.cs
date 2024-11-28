@@ -94,7 +94,7 @@
             this.gbFilter.Controls.Add(this.txtSearch);
             this.gbFilter.Location = new System.Drawing.Point(6, 8);
             this.gbFilter.Name = "gbFilter";
-            this.gbFilter.Size = new System.Drawing.Size(556, 67);
+            this.gbFilter.Size = new System.Drawing.Size(685, 67);
             this.gbFilter.TabIndex = 5;
             this.gbFilter.TabStop = false;
             this.gbFilter.Text = "Filter";
@@ -130,7 +130,7 @@
             this.Controls.Add(this.gbFilter);
             this.Controls.Add(this.ctrlPersonCard1);
             this.Name = "ctrlPersonCardWithFilter";
-            this.Size = new System.Drawing.Size(717, 458);
+            this.Size = new System.Drawing.Size(699, 419);
             this.Load += new System.EventHandler(this.ctrlPersonCardWithFilter_Load);
             ((System.ComponentModel.ISupportInitialize)(this.btnAddNewPerson)).EndInit();
             this.gbFilter.ResumeLayout(false);

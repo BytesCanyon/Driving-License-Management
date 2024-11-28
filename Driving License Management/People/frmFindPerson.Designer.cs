@@ -48,7 +48,7 @@
             // 
             // btnClose
             // 
-            this.btnClose.Location = new System.Drawing.Point(609, 495);
+            this.btnClose.Location = new System.Drawing.Point(609, 462);
             this.btnClose.Name = "btnClose";
             this.btnClose.Size = new System.Drawing.Size(75, 23);
             this.btnClose.TabIndex = 3;
@@ -59,17 +59,17 @@
             // ctrlPersonCardWithFilter1
             // 
             this.ctrlPersonCardWithFilter1.FilterEnabled = true;
-            this.ctrlPersonCardWithFilter1.Location = new System.Drawing.Point(8, 53);
+            this.ctrlPersonCardWithFilter1.Location = new System.Drawing.Point(8, 44);
             this.ctrlPersonCardWithFilter1.Name = "ctrlPersonCardWithFilter1";
             this.ctrlPersonCardWithFilter1.ShowAddPerson = true;
-            this.ctrlPersonCardWithFilter1.Size = new System.Drawing.Size(690, 436);
+            this.ctrlPersonCardWithFilter1.Size = new System.Drawing.Size(690, 407);
             this.ctrlPersonCardWithFilter1.TabIndex = 2;
             // 
             // frmFindPerson
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(705, 566);
+            this.ClientSize = new System.Drawing.Size(705, 491);
             this.Controls.Add(this.btnClose);
             this.Controls.Add(this.ctrlPersonCardWithFilter1);
             this.Controls.Add(this.lblTitle);
