@@ -166,7 +166,7 @@ namespace DVLD_Business
             return clsPersonData.GetAllPeople();
         }
 
-        public static bool DeleePerson(int id)
+        public static bool DeletePerson(int id)
         {
            return  clsPersonData.DeletePerson(id);
         }

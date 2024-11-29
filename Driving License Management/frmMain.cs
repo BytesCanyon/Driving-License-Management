@@ -40,5 +40,11 @@ namespace Driving_License_Management
             frmShowPersonInfo frm = new frmShowPersonInfo(1);
             frm.Show();
         }
+
+        private void asdToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            frmListPeople asd = new frmListPeople();
+            asd.Show();
+        }
     }
 }
