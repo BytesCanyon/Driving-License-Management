@@ -171,5 +171,10 @@ namespace Driving_License_Management.People
             }
         }
 
+        private void button1_Click(object sender, EventArgs e)
+        {
+            frmAddUpdatePepole frmAddUpdatePepole = new frmAddUpdatePepole();
+            frmAddUpdatePepole.ShowDialog();
+        }
     }
 }
