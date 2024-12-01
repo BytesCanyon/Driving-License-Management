@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Data_Access
+namespace DVLD_DataAccess
 {
     static class clsDataAccessSettings
     {

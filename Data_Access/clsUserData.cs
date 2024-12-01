@@ -6,9 +6,9 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Data_Access
+namespace DVLD_DataAccess
 {
-    internal class clsUserData
+    public class clsUserData
     {
         public static bool GetUserInfoByUserID(int UserID, ref int PersonID, ref string Username,
             ref string Password, ref bool isActive)
@@ -129,7 +129,7 @@ namespace Data_Access
             SqlConnection connection = new SqlConnection(clsDataAccessSettings.ConnectionString);
             string query = @"insert into users (PersonID, UserName, Password, IsActive)
                             values (@PersonID, @UserName, @Password, @IsActive);
-                            select SCOPE_IDENTITY";
+                            select SCOPE_IDENTITY;";
             SqlCommand command = new SqlCommand(query, connection);
             command.Parameters.AddWithValue("@PersonID", PersonID);
             command.Parameters.AddWithValue("@UserName", UserName);
@@ -212,7 +212,7 @@ namespace Data_Access
             }
             catch (Exception)
             {
-                // Console.WriteLine("Error: " + ex.Message);
+                throw;
             }
             finally
             {
@@ -321,18 +321,16 @@ namespace Data_Access
             }
             return isFound;
         }
-        public static bool DoesPersonHaveUser44(int PersonID)
-        {
-            return IsUserExistForPersonID(PersonID);
-        }
+
         public static bool ChangePassword(int UserID, string NewPassword)
         {
             int rowsAffected = 0;
 
             SqlConnection connection = new SqlConnection(clsDataAccessSettings.ConnectionString);
-            string query = @"update Users set NewPassword = @NewPassword where UserID = @UserID";
+            string query = @"update Users set Password = @NewPassword where UserID = @UserID";
             SqlCommand command = new SqlCommand(query, connection);
             command.Parameters.AddWithValue("@UserID", UserID);
+            command.Parameters.AddWithValue("@NewPassword", NewPassword);
             try
             {
                 connection.Open();
