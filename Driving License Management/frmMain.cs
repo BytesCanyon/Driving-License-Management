@@ -8,6 +8,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using Driving_License_Management.People;
+using Driving_License_Management.Users;
 
 namespace Driving_License_Management
 {
@@ -51,6 +52,12 @@ namespace Driving_License_Management
         {
             frmListPeople frmListPeople = new frmListPeople();
             frmListPeople.Show();
+        }
+
+        private void usersToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            frmUserAddEdit users = new frmUserAddEdit();
+            users.Show();
         }
     }
 }

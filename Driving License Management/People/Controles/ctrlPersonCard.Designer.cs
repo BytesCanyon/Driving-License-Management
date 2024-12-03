@@ -356,7 +356,7 @@
             // pcbProfile
             // 
             this.pcbProfile.Image = global::Driving_License_Management.Properties.Resources.Male_512;
-            this.pcbProfile.Location = new System.Drawing.Point(550, 224);
+            this.pcbProfile.Location = new System.Drawing.Point(550, 116);
             this.pcbProfile.Margin = new System.Windows.Forms.Padding(2);
             this.pcbProfile.Name = "pcbProfile";
             this.pcbProfile.Size = new System.Drawing.Size(100, 98);
@@ -367,7 +367,7 @@
             // lblEdit
             // 
             this.lblEdit.AutoSize = true;
-            this.lblEdit.Location = new System.Drawing.Point(559, 147);
+            this.lblEdit.Location = new System.Drawing.Point(559, 51);
             this.lblEdit.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lblEdit.Name = "lblEdit";
             this.lblEdit.Size = new System.Drawing.Size(82, 13);

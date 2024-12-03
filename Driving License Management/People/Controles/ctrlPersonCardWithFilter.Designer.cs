@@ -120,7 +120,7 @@
             this.ctrlPersonCard1.Location = new System.Drawing.Point(6, 78);
             this.ctrlPersonCard1.Margin = new System.Windows.Forms.Padding(2);
             this.ctrlPersonCard1.Name = "ctrlPersonCard1";
-            this.ctrlPersonCard1.Size = new System.Drawing.Size(685, 356);
+            this.ctrlPersonCard1.Size = new System.Drawing.Size(685, 327);
             this.ctrlPersonCard1.TabIndex = 0;
             // 
             // ctrlPersonCardWithFilter

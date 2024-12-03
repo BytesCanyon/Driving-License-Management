@@ -127,9 +127,9 @@ namespace DVLD_DataAccess
         {
             int userID = -1;
             SqlConnection connection = new SqlConnection(clsDataAccessSettings.ConnectionString);
-            string query = @"insert into users (PersonID, UserName, Password, IsActive)
-                            values (@PersonID, @UserName, @Password, @IsActive);
-                            select SCOPE_IDENTITY;";
+            string query = @"INSERT INTO users (PersonID, UserName, Password, IsActive)
+                            VALUES (@PersonID, @UserName, @Password, @IsActive);
+                            SELECT SCOPE_IDENTITY() AS NewUserID;";
             SqlCommand command = new SqlCommand(query, connection);
             command.Parameters.AddWithValue("@PersonID", PersonID);
             command.Parameters.AddWithValue("@UserName", UserName);
