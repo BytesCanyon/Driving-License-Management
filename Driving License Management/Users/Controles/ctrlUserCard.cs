@@ -25,15 +25,15 @@ namespace Driving_License_Management.Users.Controles
         {
             InitializeComponent();
         }
-        public void LoadUserInfo()
+        public void LoadUserInfo(int userid)
         {
-            clsUser = clsUser.FindByUserID(UserID);
+            clsUser = clsUser.FindByUserID(userid);
             if (clsUser == null) {
                 _ResetPersonInfo();
-                MessageBox.Show("No User with ID = " + UserID, "User Not Found", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+                MessageBox.Show("No User with ID = " + userid, "User Not Found", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
                 return;
             }
-            _FillUserInfo();            
+            _FillUserInfo();
         }
         void _FillUserInfo()
         {
