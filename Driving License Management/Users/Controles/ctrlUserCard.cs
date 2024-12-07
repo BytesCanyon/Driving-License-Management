@@ -40,6 +40,7 @@ namespace Driving_License_Management.Users.Controles
             ctrlPersonCard1.LoadPersonIfo(clsUser.PersonID);
             lblUserid.Text = clsUser.UserID.ToString();
             lblUsername.Text = clsUser.UserName.ToString();
+
             if (clsUser.isActive)
             {
                 lblIsActive.Text = "Yes";

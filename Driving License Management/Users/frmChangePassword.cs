@@ -24,22 +24,6 @@ namespace Driving_License_Management.Users
             txtCurrentPassword.Focus();
         }
 
-        private void frmChangePassword_Load(object sender, EventArgs e)
-        {
-            ResetDefaultValues();
-
-            _user = clsUser.FindByUserID(_userID);
-
-            if (_user == null)
-            {
-                MessageBox.Show("Could not find user with ID = " + _userID,
-                    "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                Close();
-                return;
-            }
-
-            ctrlUserCard1.LoadUserInfo(_userID);
-        }
 
         private void txtCurrentPassword_Validating(object sender, CancelEventArgs e)
         {
@@ -115,6 +99,23 @@ namespace Driving_License_Management.Users
         private void btnClose_Click(object sender, EventArgs e)
         {
             this.Close();
+        }
+
+        private void frmChangePassword_Load(object sender, EventArgs e)
+        {
+            ResetDefaultValues();
+
+            _user = clsUser.FindByUserID(_userID);
+
+            if (_user == null)
+            {
+                MessageBox.Show("Could not find user with ID = " + _userID,
+                    "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                Close();
+                return;
+            }
+
+            ctrlUserCard1.LoadUserInfo(_userID);
         }
     }
 }

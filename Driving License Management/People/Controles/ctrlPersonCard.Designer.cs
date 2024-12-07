@@ -411,7 +411,6 @@
             this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "ctrlPersonCard";
             this.Size = new System.Drawing.Size(664, 332);
-            this.Load += new System.EventHandler(this.clsPersonCard_Load);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();

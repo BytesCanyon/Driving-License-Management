@@ -56,7 +56,7 @@ namespace Driving_License_Management
 
         private void usersToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            frmUserAddEdit users = new frmUserAddEdit();
+            frmListUsers users = new frmListUsers();
             users.Show();
         }
     }

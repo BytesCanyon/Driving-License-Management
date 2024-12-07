@@ -42,7 +42,7 @@ namespace Driving_License_Management.Users
         {
             _ResetDefualtVales();
             if (mode == enMode.Update)            
-                _LoadData();            
+                _LoadData();          
         }
 
         void _ResetDefualtVales()
@@ -79,13 +79,17 @@ namespace Driving_License_Management.Users
             txtPassword.Text = _User.Password;
             txtConfirmPassword.Text = _User.Password;
             chkIsActive.Checked = _User.isActive;
-            ctrlPersonCardWithFilter1.LoadPersonInfo(_User.PersonID);            
+            ctrlPersonCardWithFilter1.LoadPersonInfo(_User.PersonID);          
         }
         private void btnNext_Click(object sender, EventArgs e)
         {
             if (mode == enMode.Update) {
                 tpLoginInfo.Enabled = true;
                 tcUserInfo.SelectedTab = tcUserInfo.TabPages["tpLoginInfo"];
+                txtUserName.Text = _User.UserName;
+                txtPassword.Text = _User.Password;
+                txtConfirmPassword.Text = _User.Password;
+                chkIsActive.Checked = _User.isActive;
                 return;
             }
             if(ctrlPersonCardWithFilter1.PersonID != -1)

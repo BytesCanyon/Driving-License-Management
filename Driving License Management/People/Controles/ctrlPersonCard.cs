@@ -104,10 +104,6 @@ namespace Driving_License_Management.People.Controles
             }
         }
 
-        private void clsPersonCard_Load(object sender, EventArgs e)
-        {
-
-        }
 
   
     }
