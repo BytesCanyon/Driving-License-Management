@@ -27,48 +27,48 @@ namespace Driving_License_Management.Users
 
         private void txtCurrentPassword_Validating(object sender, CancelEventArgs e)
         {
-            if (string.IsNullOrWhiteSpace(sdsd.Text))
+            if (string.IsNullOrWhiteSpace(txtCurrentPassword.Text))
             {
                 e.Cancel = true;
-                errorProvider1.SetError(sdsd, "Current password cannot be blank");
+                errorProvider1.SetError(txtCurrentPassword, "Current password cannot be blank");
                 return;
             }
 
-            errorProvider1.SetError(sdsd, null);
+            errorProvider1.SetError(txtCurrentPassword, null);
 
-            if (_user.Password != sdsd.Text.Trim())
+            if (_user.Password.Trim() != txtCurrentPassword.Text.Trim())
             {
                 e.Cancel = true;
-                errorProvider1.SetError(sdsd, "Current password is wrong!");
+                errorProvider1.SetError(txtCurrentPassword, "Current password is wrong!");
                 return;
             }
 
-            errorProvider1.SetError(sdsd, null);
+            errorProvider1.SetError(txtCurrentPassword, null);
         }
 
         private void txtNewPassword_Validating(object sender, CancelEventArgs e)
         {
-            if (string.IsNullOrWhiteSpace(sd.Text))
+            if (string.IsNullOrWhiteSpace(txtNewPassword.Text))
             {
                 e.Cancel = true;
-                errorProvider1.SetError(sd, "New Password cannot be blank");
+                errorProvider1.SetError(txtNewPassword, "New Password cannot be blank");
             }
             else
             {
-                errorProvider1.SetError(sd, null);
+                errorProvider1.SetError(txtNewPassword, null);
             }
         }
 
         private void txtConfirmPassword_Validating(object sender, CancelEventArgs e)
         {
-            if (dssd.Text.Trim() != sd.Text.Trim())
+            if (txtNewPassword.Text.Trim() != txtConfirmPassword.Text.Trim())
             {
                 e.Cancel = true;
-                errorProvider1.SetError(dssd, "Password confirmation does not match new password!");
+                errorProvider1.SetError(txtConfirmPassword, "Password confirmation does not match new password!");
             }
             else
             {
-                errorProvider1.SetError(dssd, null);
+                errorProvider1.SetError(txtConfirmPassword, null);
             }
         }
 
@@ -81,7 +81,7 @@ namespace Driving_License_Management.Users
                 return;
             }
 
-            _user.Password = sd.Text;
+            _user.Password = txtNewPassword.Text;
 
             if (_user.Save())
             {

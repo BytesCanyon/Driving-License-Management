@@ -7,6 +7,8 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using Driving_License_Management.Global;
+using Driving_License_Management.Login;
 using Driving_License_Management.People;
 using Driving_License_Management.Users;
 
@@ -14,9 +16,11 @@ namespace Driving_License_Management
 {
     public partial class frmMain : Form
     {
-        public frmMain()
+        frmLogin _frmLogin;
+        public frmMain(frmLogin login)
         {
             InitializeComponent();
+            _frmLogin = login;
         }
 
         private void frmMain_Load(object sender, EventArgs e)
@@ -58,6 +62,25 @@ namespace Driving_License_Management
         {
             frmListUsers users = new frmListUsers();
             users.Show();
+        }
+
+        private void signOutToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            clsGlobal.CurrentUser = null;
+            _frmLogin.Show();
+            this.Close();
+        }
+
+        private void changePasswordToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            frmChangePassword frmChangePassword = new frmChangePassword(clsGlobal.CurrentUser.UserID);
+            frmChangePassword.ShowDialog();
+        }
+
+        private void currentUserInfoToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            frmUserInfo frmUserInfo = new frmUserInfo(clsGlobal.CurrentUser.UserID);
+            frmUserInfo.ShowDialog();
         }
     }
 }

@@ -47,7 +47,7 @@
             // 
             this.ctrlUserCard1.Location = new System.Drawing.Point(2, 2);
             this.ctrlUserCard1.Name = "ctrlUserCard1";
-            this.ctrlUserCard1.Size = new System.Drawing.Size(671, 412);
+            this.ctrlUserCard1.Size = new System.Drawing.Size(670, 420);
             this.ctrlUserCard1.TabIndex = 0;
             // 
             // label2
@@ -56,7 +56,7 @@
             this.label2.BackColor = System.Drawing.Color.Maroon;
             this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.ForeColor = System.Drawing.Color.Snow;
-            this.label2.Location = new System.Drawing.Point(739, 40);
+            this.label2.Location = new System.Drawing.Point(710, 40);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(153, 20);
             this.label2.TabIndex = 2;
@@ -65,7 +65,7 @@
             // sdsd
             // 
             this.sdsd.AutoSize = true;
-            this.sdsd.Location = new System.Drawing.Point(739, 96);
+            this.sdsd.Location = new System.Drawing.Point(710, 96);
             this.sdsd.Name = "sdsd";
             this.sdsd.Size = new System.Drawing.Size(90, 13);
             this.sdsd.TabIndex = 3;
@@ -74,7 +74,7 @@
             // sd
             // 
             this.sd.AutoSize = true;
-            this.sd.Location = new System.Drawing.Point(739, 149);
+            this.sd.Location = new System.Drawing.Point(710, 155);
             this.sd.Name = "sd";
             this.sd.Size = new System.Drawing.Size(78, 13);
             this.sd.TabIndex = 4;
@@ -83,7 +83,7 @@
             // dssd
             // 
             this.dssd.AutoSize = true;
-            this.dssd.Location = new System.Drawing.Point(739, 202);
+            this.dssd.Location = new System.Drawing.Point(710, 214);
             this.dssd.Name = "dssd";
             this.dssd.Size = new System.Drawing.Size(91, 13);
             this.dssd.TabIndex = 5;
@@ -91,25 +91,25 @@
             // 
             // txtCurrentPassword
             // 
-            this.txtCurrentPassword.Location = new System.Drawing.Point(739, 119);
+            this.txtCurrentPassword.Location = new System.Drawing.Point(710, 122);
             this.txtCurrentPassword.Name = "txtCurrentPassword";
-            this.txtCurrentPassword.Size = new System.Drawing.Size(146, 20);
+            this.txtCurrentPassword.Size = new System.Drawing.Size(156, 20);
             this.txtCurrentPassword.TabIndex = 6;
             this.txtCurrentPassword.Validating += new System.ComponentModel.CancelEventHandler(this.txtCurrentPassword_Validating);
             // 
             // txtNewPassword
             // 
-            this.txtNewPassword.Location = new System.Drawing.Point(739, 172);
+            this.txtNewPassword.Location = new System.Drawing.Point(710, 181);
             this.txtNewPassword.Name = "txtNewPassword";
-            this.txtNewPassword.Size = new System.Drawing.Size(146, 20);
+            this.txtNewPassword.Size = new System.Drawing.Size(156, 20);
             this.txtNewPassword.TabIndex = 7;
             this.txtNewPassword.Validating += new System.ComponentModel.CancelEventHandler(this.txtNewPassword_Validating);
             // 
             // txtConfirmPassword
             // 
-            this.txtConfirmPassword.Location = new System.Drawing.Point(739, 225);
+            this.txtConfirmPassword.Location = new System.Drawing.Point(710, 240);
             this.txtConfirmPassword.Name = "txtConfirmPassword";
-            this.txtConfirmPassword.Size = new System.Drawing.Size(146, 20);
+            this.txtConfirmPassword.Size = new System.Drawing.Size(156, 20);
             this.txtConfirmPassword.TabIndex = 8;
             this.txtConfirmPassword.Validating += new System.ComponentModel.CancelEventHandler(this.txtConfirmPassword_Validating);
             // 
@@ -119,7 +119,7 @@
             // 
             // btnClose
             // 
-            this.btnClose.Location = new System.Drawing.Point(739, 299);
+            this.btnClose.Location = new System.Drawing.Point(710, 299);
             this.btnClose.Name = "btnClose";
             this.btnClose.Size = new System.Drawing.Size(75, 23);
             this.btnClose.TabIndex = 9;
@@ -129,7 +129,7 @@
             // 
             // btnSave
             // 
-            this.btnSave.Location = new System.Drawing.Point(846, 299);
+            this.btnSave.Location = new System.Drawing.Point(791, 299);
             this.btnSave.Name = "btnSave";
             this.btnSave.Size = new System.Drawing.Size(75, 23);
             this.btnSave.TabIndex = 10;
@@ -141,7 +141,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(967, 422);
+            this.ClientSize = new System.Drawing.Size(904, 422);
             this.Controls.Add(this.btnSave);
             this.Controls.Add(this.btnClose);
             this.Controls.Add(this.txtConfirmPassword);
