@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using Driving_License_Management.ApplicationTypes;
 using Driving_License_Management.Global;
 using Driving_License_Management.Login;
 using Driving_License_Management.People;
@@ -81,6 +82,12 @@ namespace Driving_License_Management
         {
             frmUserInfo frmUserInfo = new frmUserInfo(clsGlobal.CurrentUser.UserID);
             frmUserInfo.ShowDialog();
+        }
+
+        private void manageApplicationTypeToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            frmListApplicationTypes frmListApplicationTypes = new frmListApplicationTypes();
+            frmListApplicationTypes.ShowDialog();
         }
     }
 }

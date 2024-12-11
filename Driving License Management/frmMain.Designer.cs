@@ -98,7 +98,7 @@
             this.retakeTestToolStripMenuItem});
             this.driverToolStripMenuItem.Image = global::Driving_License_Management.Properties.Resources.Driver_License_48;
             this.driverToolStripMenuItem.Name = "driverToolStripMenuItem";
-            this.driverToolStripMenuItem.Size = new System.Drawing.Size(208, 22);
+            this.driverToolStripMenuItem.Size = new System.Drawing.Size(216, 30);
             this.driverToolStripMenuItem.Text = "Driver Licenses Services";
             // 
             // newDrivingLicensToolStripMenuItem
@@ -160,7 +160,7 @@
             this.internationalLicensevToolStripMenuItem});
             this.manageApplicationsToolStripMenuItem.Image = global::Driving_License_Management.Properties.Resources.Manage_Applications_64;
             this.manageApplicationsToolStripMenuItem.Name = "manageApplicationsToolStripMenuItem";
-            this.manageApplicationsToolStripMenuItem.Size = new System.Drawing.Size(208, 22);
+            this.manageApplicationsToolStripMenuItem.Size = new System.Drawing.Size(216, 30);
             this.manageApplicationsToolStripMenuItem.Text = "Manage Applications";
             // 
             // localDrivingLicenseApplicationsToolStripMenuItem
@@ -185,7 +185,7 @@
             this.releaseDetainedLicenseToolStripMenuItem});
             this.detainLicensesToolStripMenuItem.Image = global::Driving_License_Management.Properties.Resources.Detain_512;
             this.detainLicensesToolStripMenuItem.Name = "detainLicensesToolStripMenuItem";
-            this.detainLicensesToolStripMenuItem.Size = new System.Drawing.Size(208, 22);
+            this.detainLicensesToolStripMenuItem.Size = new System.Drawing.Size(216, 30);
             this.detainLicensesToolStripMenuItem.Text = "Detain Licenses";
             // 
             // manageDetainedLicensesToolStripMenuItem
@@ -213,14 +213,15 @@
             // 
             this.manageApplicationTypeToolStripMenuItem.Image = global::Driving_License_Management.Properties.Resources.Application_Types_64;
             this.manageApplicationTypeToolStripMenuItem.Name = "manageApplicationTypeToolStripMenuItem";
-            this.manageApplicationTypeToolStripMenuItem.Size = new System.Drawing.Size(208, 22);
+            this.manageApplicationTypeToolStripMenuItem.Size = new System.Drawing.Size(216, 30);
             this.manageApplicationTypeToolStripMenuItem.Text = "Manage Application Type";
+            this.manageApplicationTypeToolStripMenuItem.Click += new System.EventHandler(this.manageApplicationTypeToolStripMenuItem_Click);
             // 
             // manageTestToolStripMenuItem
             // 
             this.manageTestToolStripMenuItem.Image = global::Driving_License_Management.Properties.Resources.Test_Type_64;
             this.manageTestToolStripMenuItem.Name = "manageTestToolStripMenuItem";
-            this.manageTestToolStripMenuItem.Size = new System.Drawing.Size(208, 22);
+            this.manageTestToolStripMenuItem.Size = new System.Drawing.Size(216, 30);
             this.manageTestToolStripMenuItem.Text = "Manage Test";
             // 
             // peopleToolStripMenuItem
@@ -261,7 +262,7 @@
             // 
             this.currentUserInfoToolStripMenuItem.Image = global::Driving_License_Management.Properties.Resources.PersonDetails_32;
             this.currentUserInfoToolStripMenuItem.Name = "currentUserInfoToolStripMenuItem";
-            this.currentUserInfoToolStripMenuItem.Size = new System.Drawing.Size(188, 30);
+            this.currentUserInfoToolStripMenuItem.Size = new System.Drawing.Size(168, 22);
             this.currentUserInfoToolStripMenuItem.Text = "Current User Info";
             this.currentUserInfoToolStripMenuItem.Click += new System.EventHandler(this.currentUserInfoToolStripMenuItem_Click);
             // 
@@ -269,7 +270,7 @@
             // 
             this.changePasswordToolStripMenuItem.Image = global::Driving_License_Management.Properties.Resources.Password_32;
             this.changePasswordToolStripMenuItem.Name = "changePasswordToolStripMenuItem";
-            this.changePasswordToolStripMenuItem.Size = new System.Drawing.Size(188, 30);
+            this.changePasswordToolStripMenuItem.Size = new System.Drawing.Size(168, 22);
             this.changePasswordToolStripMenuItem.Text = "Change Password";
             this.changePasswordToolStripMenuItem.Click += new System.EventHandler(this.changePasswordToolStripMenuItem_Click);
             // 
@@ -277,7 +278,7 @@
             // 
             this.signOutToolStripMenuItem.Image = global::Driving_License_Management.Properties.Resources.sign_out_32__2;
             this.signOutToolStripMenuItem.Name = "signOutToolStripMenuItem";
-            this.signOutToolStripMenuItem.Size = new System.Drawing.Size(188, 30);
+            this.signOutToolStripMenuItem.Size = new System.Drawing.Size(168, 22);
             this.signOutToolStripMenuItem.Text = "Sign Out";
             this.signOutToolStripMenuItem.Click += new System.EventHandler(this.signOutToolStripMenuItem_Click);
             // 
