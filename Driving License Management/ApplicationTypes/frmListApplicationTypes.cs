@@ -43,5 +43,14 @@ namespace Driving_License_Management.ApplicationTypes
             dataGridView1.Columns[1].FillWeight = 50;
             dataGridView1.Columns[2].FillWeight = 25; 
         }
+
+        private void editApplicationToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            int id = (int)dataGridView1.CurrentRow.Cells[0].Value;
+
+            frmEditApplicationTypes frm = new frmEditApplicationTypes(id);
+            frm.ShowDialog();
+            frmListApplicationTypes_Load(sender, e);
+        }
     }
 }

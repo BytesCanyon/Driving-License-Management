@@ -64,7 +64,7 @@ namespace DVLD_Business
             return clsApplicationTypeData.GetAllApplicationTypes();
         }
 
-        public bool Save()
+        public  bool Save()
         {
             switch (Mode)
             {
