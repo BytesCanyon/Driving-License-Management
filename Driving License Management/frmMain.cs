@@ -11,6 +11,7 @@ using Driving_License_Management.ApplicationTypes;
 using Driving_License_Management.Global;
 using Driving_License_Management.Login;
 using Driving_License_Management.People;
+using Driving_License_Management.TestTypes;
 using Driving_License_Management.Users;
 
 namespace Driving_License_Management
@@ -88,6 +89,12 @@ namespace Driving_License_Management
         {
             frmListApplicationTypes frmListApplicationTypes = new frmListApplicationTypes();
             frmListApplicationTypes.ShowDialog();
+        }
+
+        private void manageTestToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            frmManageTestTypes frm = new frmManageTestTypes();
+            frm.ShowDialog();
         }
     }
 }
